@@ -3,7 +3,7 @@ name: On git push on :branch-x
 on:
   push:
     branches:
-      - branch-x
+      - master
 
 jobs:
   build:
@@ -13,9 +13,9 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Demo one-line script run
-      run: echo 'This is branch :branch-x'
+      run: echo 'This is branch :master'
 
     - name: Demo multi-line script run
       run: |
-        echo 'Line 00 from branch :branch-x'
-        echo 'Line 01 from branch :branch-x'
+        echo 'Line 00 from branch :master'
+        echo 'Line 01 from branch :master'
