@@ -21,13 +21,12 @@ jobs:
         echo 'Line 01 from branch :dev'
         echo 'Line 02 from branch :dev'
 
-    - name: notify actionstatus to slack channel
-        uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ job.status }}
-          fields: repo, ref,     message,      commit,     author, action,           eventName, workflow
-          #             branch   commit text   commit id           view action log   eg push    :this_filename
-        env:
-          GITHUB_TOKEN: b1af639722c7f21089ae2176445410746c22357b  # required to have field :message ref. https://action-slack.netlify.app/with#fields
-          SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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  # ref. slack help https://slack.com/intl/en-vn/help/articles/115005265063-Incoming-Webhooks-for-Slack
-        if: always()  # pick up events even if the job fails or is canceled.
+    - uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        fields: repo, ref,     message,      commit,     author, action,           eventName, workflow
+        #             branch   commit text   commit id           view action log   eg push    :this_filename
+      env:
+        GITHUB_TOKEN: b1af639722c7f21089ae2176445410746c22357b  # required to have field :message ref. https://action-slack.netlify.app/with#fields
+        SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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  # ref. slack help https://slack.com/intl/en-vn/help/articles/115005265063-Incoming-Webhooks-for-Slack
+      if: always()  # pick up events even if the job fails or is canceled.
