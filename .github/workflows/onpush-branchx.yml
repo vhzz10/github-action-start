@@ -1,0 +1,21 @@
+name: On git push on :branch-x
+
+on:
+  push:
+    branches:
+      - branch-x
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    #runs-on: namgivu/ubuntu-pipenv:18.04-3.7  #TODO why this image not working while it available at https://hub.docker.com/r/namgivu/ubuntu-pipenv
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Demo one-line script run
+      run: echo 'This is branch :branch-x'
+
+    - name: Demo multi-line script run
+      run: |
+        echo 'Line 00 from branch :branch-x'
+        echo 'Line 01 from branch :branch-x'
