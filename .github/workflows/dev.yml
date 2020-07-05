@@ -20,6 +20,7 @@ jobs:
         echo 'Line 00 from branch :dev'
         echo 'Line 01 from branch :dev'
         echo 'Line 02 from branch :dev'
+        echo 'Line 03 from branch :dev'
 
     - uses: 8398a7/action-slack@v3
       with:
