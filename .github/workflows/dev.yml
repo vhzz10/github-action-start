@@ -28,5 +28,5 @@ jobs:
         #             branch   commit text   commit id           view action log   eg push    :this_filename
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # required to have field :message ref. https://action-slack.netlify.app/with#fields
-        SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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  # ref. slack help https://slack.com/intl/en-vn/help/articles/115005265063-Incoming-Webhooks-for-Slack
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}  # ref. slack help https://slack.com/intl/en-vn/help/articles/115005265063-Incoming-Webhooks-for-Slack
       if: always()  # pick up events even if the job fails or is canceled.
