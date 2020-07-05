@@ -28,5 +28,5 @@ jobs:
         #             branch   commit text   commit id           view action log   eg push    :this_filename
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
+        SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
       if: always()  # pick up events even if the job fails or is canceled.
