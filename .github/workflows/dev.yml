@@ -21,7 +21,7 @@ jobs:
         echo 'Line 01 from branch :dev'
         echo 'Line 02 from branch :dev'
 
-    - name: notify actionstatus to slack channel  # ref. https://github.com/marketplace/actions/action-slack
+    - name: notify actionstatus to slack channel
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
