@@ -21,11 +21,11 @@ jobs:
         echo 'Line 01 from branch :uat'
 
     - uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ job.status }}
-          fields: repo, ref,     message,      commit,     author, action,           eventName, workflow
-          #             branch   commit text   commit id           view action log   eg push    :this_filename
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        if: always()  # pick up events even if the job fails or is canceled.
+      with:
+        status: ${{ job.status }}
+        fields: repo, ref,     message,      commit,     author, action,           eventName, workflow
+        #             branch   commit text   commit id           view action log   eg push    :this_filename
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      if: always()  # pick up events even if the job fails or is canceled.
