@@ -24,7 +24,7 @@ jobs:
     - name: notify actionstatus to slack channel
       uses: 8398a7/action-slack@v3
         with:
-          status: ${{ job.status }}
+          status: ''
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
         env:
           GITHUB_TOKEN: b1af639722c7f21089ae2176445410746c22357b # optional
