@@ -22,9 +22,9 @@ jobs:
         echo 'Line 02 from branch :dev'
         echo 'Line 03 from branch :dev'
 
-    runs:
-      using: 'docker'
-      image: 'Dockerfile'
+    - name: Hello world action step
+      uses: ./ # Uses an action in the root directory
+      id: hello
 
     - uses: 8398a7/action-slack@v3
       with:

@@ -1,0 +1,6 @@
+# action.yml
+name: 'First github action docker'
+description: 'First github action docker'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
