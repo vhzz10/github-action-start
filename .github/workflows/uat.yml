@@ -22,10 +22,6 @@ jobs:
         echo 'Line 02 from branch :uat'
         echo 'Line 03 from branch :uat'
 
-    - name: Hello docker
-      uses: ./ # Uses an action in the root directory
-      id: hello
-
     - uses: docker/build-push-action@v1
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
