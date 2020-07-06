@@ -22,7 +22,7 @@ jobs:
         echo 'Line 02 from branch :dev'
         echo 'Line 03 from branch :dev'
 
-    - name: Hello world action step
+    - name: Hello docker
       uses: ./ # Uses an action in the root directory
       id: hello
 
