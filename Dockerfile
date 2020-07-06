@@ -1,3 +1,3 @@
 FROM alpine:latest
 ENV ENV_TAG=dev
-CMD ["tail", "-f"]
+CMD echo $ENV_TAG
